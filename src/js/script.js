@@ -1,5 +1,6 @@
-import { fetchGitHubUser } from "./api.js";
+import { fetchGitHubUser, fetchGithubUserRepos } from "./api.js";
 import { showLoading, showProfile, showError } from "./profile.js";
+
 
 // Selecionar elementos
 const inputSearch = document.getElementById("input-search");
@@ -18,7 +19,8 @@ async function handleSearch() {
   showLoading(profileResults);
   try {
     const userData = await fetchGitHubUser(valorDigitado);
-    showProfile(profileResults, userData);
+    const userRepos = await fetchGithubUserRepos(valorDigitado);
+    showProfile(profileResults, userData, userRepos);
   } catch (error) {
     showError(profileResults, error.message || "Ocorreu um erro ao buscar o usuário. Tente novamente mais tarde.");
   }
