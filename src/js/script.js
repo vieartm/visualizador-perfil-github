@@ -8,7 +8,11 @@ const btnSearch = document.getElementById("btn-search");
 const profileResults = document.querySelector('.profile-results');
 
 // Evento de clique
+
 btnSearch.addEventListener("click", handleSearch);
+inputSearch.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") handleSearch();
+});
 
 async function handleSearch() {
   const valorDigitado = inputSearch.value.trim();
