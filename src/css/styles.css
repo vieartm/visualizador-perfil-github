@@ -1,3 +1,46 @@
+.loading-message {
+  font-size: 1.1rem;
+  color: #764ba2;
+  margin: 2rem 0;
+  text-align: center;
+}
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) auto;
+  max-width: 32rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+}
+
+.profile-info h2 {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.profile-info p {
+  font-size: var(--font-md);
+  color: var(--muted-foreground);
+}
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
